@@ -5,43 +5,45 @@ import math
 import json
 import re
 
+import pandas as pd
+import numpy as np
+
+import csv
+
 class DocOperator:
 
     doc_path = ''
-    all_folder_dict = dict
+    all_folder_dict = dict()
+    docs_dict = dict()
 
     def __init__(self,doc_path):
         self.doc_path = doc_path
     
     def generateDoc(self):
 
-        self.doc_list = [] 
-        self.all_folder_dict = dict.fromkeys(os.listdir(self.doc_path), dict({"file_list":[],"word_freq_dict":{} }))
-        
+        self.all_folder_dict = os.listdir(self.doc_path)
+
         #  read all file name to file_list array 
-
         for folder_name in self.all_folder_dict:
-
-            self.all_folder_dict[folder_name]["file_list"] = os.listdir(self.doc_path + '/' + folder_name)
-            self.all_folder_dict[folder_name]["file_list"].sort(key=self.natural_keys)
-
-        # convert to excel 
-        
+            text_files = [f for f in os.listdir(self.doc_path+'/'+folder_name) if f.endswith('.txt')]
+            self.docs_dict[folder_name] =  text_files
 
 
+        # data = pd.read_table("test.txt" ,delim_whitespace=True, names=('A', 'B', 'C'), dtype={'A': np.int64, 'B': np.float64, 'C': np.float64})
+        # print ( data )
+        with open('test.txt', 'r') as in_file:
+            in_reader = csv.reader(in_file, delimiter = '\t')
+            with open("test.csv", "w") as out_csv:
+                out_writer = csv.writer(out_csv)
+                for row in in_reader:
+                    out_writer.writerow(row)
 
-        print (json.dumps(self.all_folder_dict, indent=2))
-
-    
-    
 
 
 
-    #  sort array by name 
-    def atoi(self,text):
-        return int(text) if text.isdigit() else text
 
-    def natural_keys(self,text):
-        return [ self.atoi(c) for c in re.split('(\d+)', text) ]
+
+
+
 
 
