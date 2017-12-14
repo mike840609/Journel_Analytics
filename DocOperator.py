@@ -5,8 +5,9 @@ import math
 import json
 import re
 
-# import pandas as pd
-# import numpy as np
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 import csv
 
@@ -27,19 +28,23 @@ class DocOperator:
         for folder_name in self.all_folder_dict:
             text_files = [f for f in os.listdir(self.doc_path+'/'+folder_name) if f.endswith('.txt')]
             self.docs_dict[folder_name] =  text_files
+        # print(json.dumps(self.docs_dict, indent=3, sort_keys=True))
+
 
     
-        print(json.dumps(self.docs_dict, indent=3, sort_keys=True))
+    def convertCsv(self):
+
+        for journal_name , j_list in self.docs_dict.items():
+            for part in j_list :
+                print (part) 
+                filepath = self.doc_path + '/' + journal_name + '/' + part
+                df=pd.read_csv(filepath,delimiter="\t", encoding = 'utf-16-le')
+                print( df.tail(1))
+                break
+
+            break
 
 
-        # data = pd.read_table("test.txt" ,delim_whitespace=True, names=('A', 'B', 'C'), dtype={'A': np.int64, 'B': np.float64, 'C': np.float64})
-        # print ( data )
-        # with open('test.txt', 'r') as in_file:
-        #     in_reader = csv.reader(in_file, delimiter = '\t')
-        #     with open("test.csv", "w") as out_csv:
-        #         out_writer = csv.writer(out_csv)
-        #         for row in in_reader:
-        #             out_writer.writerow(row)
 
 
 

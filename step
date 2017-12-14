@@ -1,0 +1,153 @@
+簡要分析
+關鍵字分析
+關鍵字出現次數表
+有哪些關鍵字
+可簡要敘述如何跑
+
+============================================================================================================================================================
+
+FN	 檔案名稱
+
+VR	版本號碼
+
+PT	出版類型 (J=期刊；B=書籍；S=系列；P=專利)
+
+AU	作者
+
+AF	作者全名
+
+BA	書籍作者
+
+BF	書籍作者全名
+
+CA	團體作者
+
+GP	書籍團體作者
+
+BE	編輯者
+
+TI	文件標題
+
+SO	出版品名稱
+
+SE	書籍系列標題
+
+BS	書籍系列副標題
+
+LA	語言
+
+DT	文件類型
+
+CT	研討會標題
+
+CY	研討會日期
+
+CL	研討會地點
+
+SP	研討會贊助人
+
+HO	研討會主持人
+
+DE	作者關鍵字
+
+ID	Keywords Plus&reg;
+
+AB	摘要
+
+C1	作者地址
+
+RP	通訊作者地址
+
+EM	電子郵件地址
+
+RI	ResearcherID 號碼
+
+OI	ORCID 識別碼 (Open Researcher and Contributor ID)
+
+FU	贊助機構與補助編號
+
+FX	贊助文字
+
+CR	參考文獻
+
+NR	參考文獻數
+
+TC	Web of Science 核心合輯被引用次數計數
+
+Z9	被引用次數總計 (Web of Science 核心合輯、BIOSIS Citation Index、Chinese Science Citation Database、Data Citation Index、Russian Science Citation Index 和 SciELO Citation Index)
+
+U1	使用情況計數 (過去 180 天)
+
+U2	使用情況計數 (自 2013 年起)
+
+PU	發行者
+
+PI	出版者城市
+
+PA	出版者地址
+
+SN	國際標準期刊號 (ISSN)
+
+EI	電子國際標準期刊號 (eISSN)
+
+BN	國際標準書號 (ISBN)
+
+J9	29 個字元的來源縮寫
+
+JI	ISO 來源縮寫
+
+PD	出版日期
+
+PY	出版年份
+
+VL	卷冊
+
+IS	期
+
+SI	特刊
+
+PN	子輯
+
+SU	補充
+
+MA	會議摘要
+
+BP	起始頁
+
+EP	終止頁
+
+AR	文獻號碼
+
+DI	數位物件識別碼 (DOI)
+
+D2	書籍數位物件識別碼 (DOI)
+
+EA	早期取閱日期
+
+EY	早期取閱年份
+
+PG	頁數
+
+P2	章節計數 (Book Citation Index)
+
+WC	Web of Science 領域
+
+SC	研究領域
+
+GA	文件提供號碼
+
+PM	PubMed ID
+
+UT	登錄號
+
+OA	Open Access 指標
+
+HP	ESI 熱門論文。請注意，此欄位僅對 ESI 訂閱者有效。
+
+HC	ESI 被高度引用的論文。請注意，此欄位僅對 ESI 訂閱者有效。
+
+DA	此報告產生的日期。
+
+ER	記錄結束
+
+EF	檔案結束
